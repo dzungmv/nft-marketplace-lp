@@ -1,0 +1,370 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+
+input {
+  line-height: normal;
+}
+
+label,
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-family: "DM Sans", sans-serif;
+}
+
+#header {
+  width: 100%;
+}
+
+.header-container {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.header-left {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+.header-left-logo {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2083333333;
+  color: #3D00B7;
+  padding-right: 35px;
+  position: relative;
+}
+.header-left-logo::after {
+  content: "";
+  width: 2px;
+  background-color: #F4F4F4;
+  position: absolute;
+  right: 0;
+  height: 100%;
+}
+.header-left-navigator {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-left-navigator a {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+}
+
+.header-right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header-right-search {
+  flex: 1;
+  display: flex;
+  padding: 0 16px;
+  border: 2px solid #EFEFEF;
+  border-radius: 100px;
+  width: 300px;
+  height: 50px;
+}
+.header-right-search img {
+  width: 24px;
+}
+.header-right-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+}
+.header-right button {
+  padding: 15px 0;
+  border-radius: 60px;
+  font-weight: 700;
+  transition: all ease 0.5s;
+  border: 1px solid transparent;
+}
+.header-right .btn-upload {
+  background-color: #3D00B7;
+  color: #fff;
+  width: 131px;
+}
+.header-right .btn-upload:hover {
+  background-color: #310092;
+}
+.header-right .btn-wallet {
+  background-color: transparent;
+  color: #3D00B7;
+  border: 1px solid #3D00B7;
+  width: 156px;
+}
+.header-right .btn-wallet:hover {
+  background-color: #3D00B7;
+  color: #fff;
+}
+
+#hero {
+  margin-top: 64px;
+  margin-bottom: 120px;
+}
+#hero .hero-container {
+  display: flex;
+}
+#hero .hero-left {
+  width: 60%;
+  position: relative;
+}
+#hero .hero-left .dot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+#hero .hero-left-title {
+  max-width: 615px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0.05em;
+}
+#hero .hero-left-desc {
+  max-width: 430px;
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  margin-top: 22px;
+  margin-bottom: 40px;
+  /* or 32px */
+  color: #565656;
+}
+#hero .hero-left button {
+  padding: 24px 67px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  color: #fff;
+  border-radius: 60px;
+  background-color: #3D00B7;
+}
+#hero .hero-left button:hover {
+  background-color: #310092;
+}
+#hero .hero-left .hero-left-alys {
+  display: flex;
+  align-items: center;
+  gap: 0 22px;
+  margin-top: 32px;
+}
+#hero .hero-left .hero-left-alys .alys-item-num {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  /* identical to box height */
+  letter-spacing: 0.05em;
+}
+#hero .hero-left .hero-left-alys .alys-item-desc {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  /* identical to box height, or 32px */
+  color: #565656;
+}
+#hero .hero-right {
+  width: 40%;
+  height: 100%;
+}
+#hero .hero-right .swipper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 440px;
+  width: 100%;
+}
+#hero .hero-right .auction-logo {
+  position: absolute;
+  left: 0;
+  bottom: 100px;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+#amaze-nft {
+  background: rgba(217, 224, 236, 0.2);
+  backdrop-filter: blur(25px);
+  padding: 100px 0;
+}
+#amaze-nft .amaze-nft-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#amaze-nft .amaze-title {
+  max-width: 398px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  color: #000000;
+}
+#amaze-nft .amaze-transaction {
+  display: flex;
+  gap: 16px;
+}
+#amaze-nft .amaze-transaction-info-title {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 12px;
+  /* identical to box height */
+  color: #000000;
+}
+#amaze-nft .amaze-transaction-info-desc {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  color: #696969;
+  max-width: 249px;
+}
+
+swiper-container {
+  width: 75%;
+  height: 100%;
+}
+
+swiper-slide {
+  border-radius: 18px;
+}
+swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-header {
+  position: absolute;
+  top: 16px;
+  left: 25px;
+}
+.slider-header-title {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.05em;
+  color: #fff;
+}
+.slider-header-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.slider-header-info img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  pointer-events: none;
+}
+.slider-header-info span {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  color: #FFFFFF;
+}
+
+.slider-footer {
+  position: absolute;
+  bottom: 16px;
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  justify-content: space-between;
+  left: 25px;
+  right: 25px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16.1px);
+  -webkit-backdrop-filter: blur(16.1px);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+}
+.slider-footer .slider-footer-left-title {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 8px;
+  color: #FFFFFF;
+}
+.slider-footer span {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
+}/*# sourceMappingURL=app.css.map */

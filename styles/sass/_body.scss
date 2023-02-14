@@ -1,0 +1,166 @@
+#hero {
+    margin-top: 64px;
+    margin-bottom: 120px;
+
+    .hero-container {
+        display: flex;
+    }
+
+    .hero-left {
+        width: 60%;
+        position: relative;
+
+        .dot {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        &-title {
+            max-width: 615px;
+            font-family: $heading_font;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 48px;
+            letter-spacing: 0.05em;
+        }
+
+        &-desc {
+            max-width: 430px;
+            font-family: $font;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 160%;
+            margin-top: 22px;
+            margin-bottom: 40px;
+            /* or 32px */
+
+
+            color: #565656;
+        }
+
+        button {
+            padding: 24px 67px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 25px;
+            color: #fff;
+            border-radius: 60px;
+            background-color: $primary_color;
+
+            &:hover {
+                background-color: $primary_color_hover;
+            }
+        }
+
+        .hero-left-alys {
+            display: flex;
+            align-items: center;
+            gap: 0 22px;
+            margin-top: 32px;
+
+            .alys-item {
+
+                &-num {
+                    font-family: $heading_font;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 40px;
+                    line-height: 48px;
+                    /* identical to box height */
+
+                    letter-spacing: 0.05em;
+                }
+
+                &-desc {
+                    font-family: $font;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 160%;
+                    /* identical to box height, or 32px */
+
+
+                    color: #565656;
+                }
+            }
+        }
+    }
+
+    .hero-right {
+        width: 40%;
+        height: 100%;
+
+        .swipper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 440px;
+            width: 100%;
+        }
+
+        .auction-logo {
+            position: absolute;
+            left: 0;
+            bottom: 100px;
+            z-index: 1;
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+
+        }
+    }
+}
+
+#amaze-nft {
+    background: rgba(217, 224, 236, 0.2);
+    backdrop-filter: blur(25px);
+    padding: 100px 0;
+
+    .amaze-nft-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .amaze-title {
+        max-width: 398px;
+        font-family: $heading_font;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 34px;
+
+        color: #000000;
+    }
+
+    .amaze-transaction {
+        display: flex;
+        gap: 16px;
+    }
+
+    .amaze-transaction-info-title {
+        font-family: $font;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 12px;
+        /* identical to box height */
+        color: #000000;
+    }
+
+    .amaze-transaction-info-desc {
+        font-family: $font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 160%;
+        color: #696969;
+        max-width: 249px;
+    }
+}
