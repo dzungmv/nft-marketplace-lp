@@ -1,5 +1,5 @@
 main {
-    margin-top: 80px;
+    margin-top: 100px;
 }
 
 #hero {
@@ -969,6 +969,28 @@ main {
         .hero-right {
             width: 100% !important;
         }
+
+        .hero-left {
+            text-align: center;
+            &-title,
+            &-desc {
+                max-width: 80% !important;
+                margin: 0 auto;
+            }
+
+            &-alys {
+                justify-content: center;
+            }
+        }
+
+        .hero-right {
+            .swipper {
+                height: 500px !important;
+            }
+            .auction-logo {
+                display: none;
+            }
+        }
     }
 
     #over {
@@ -1036,11 +1058,100 @@ main {
         }
     }
 
+    #amaze-nft {
+        .amaze-nft-container {
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .amaze-title {
+            text-align: center;
+        }
+
+        .amaze-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
     .feature-nft-container {
         padding: 64px 20px !important;
     }
 
     #discover {
         padding: 64px 20px;
+    }
+}
+
+@media screen and (max-width: 739px) {
+    #hero {
+        .hero-right {
+            .swipper {
+                height: 360px !important;
+            }
+        }
+    }
+    #amaze-nft {
+        .amaze-content {
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .amaze-transaction {
+            flex-direction: column;
+            text-align: center;
+
+            &-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    #over {
+        .over-right {
+            flex-direction: column;
+            gap: 32px;
+
+            &-sell {
+                width: 100%;
+                &::before {
+                    content: none;
+                    width: 100%;
+                }
+            }
+
+            &-collect {
+                width: 100%;
+                padding: 0;
+            }
+        }
+    }
+
+    #feature-nft {
+        .feature-nft-content {
+            .nft-item {
+                width: 100%;
+            }
+        }
+    }
+
+    #discover {
+        .discover-filter {
+            &-left {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        .discover-content {
+            .item {
+                width: 100%;
+            }
+        }
     }
 }

@@ -70,7 +70,7 @@ button {
 }
 
 .header-left {
-  width: 50%;
+  width: 43%;
   display: flex;
   align-items: center;
   gap: 35px;
@@ -110,9 +110,86 @@ button {
   color: #3d00b7;
   cursor: pointer;
 }
+.header-left-navigator-mobile {
+  display: none;
+  font-size: 20px;
+}
+.header-left-navigator-mobile:focus {
+  color: red;
+}
+.header-left .active {
+  color: red;
+}
 
+.header-menu {
+  background-color: #fff;
+  position: fixed;
+  height: 100%;
+  width: 30%;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  transform: translateX(-200%);
+  transition: all ease 0.5s;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.header-menu-action button {
+  padding: 10px 12px;
+  border-radius: 12px;
+  background-color: #3d00b7;
+  color: #fff;
+}
+.header-menu-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-menu span {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2083333333;
+  color: #3d00b7;
+  padding-right: 35px;
+  position: relative;
+}
+.header-menu-close {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+.header-menu-close:hover {
+  background-color: #f4f4f4;
+  cursor: pointer;
+}
+.header-menu a {
+  color: #000000;
+  font-family: "DM Sans", sans-serif;
+}
+.header-menu-active {
+  transform: translateX(0);
+  animation: sliderFromLeft 0.5s ease-in-out;
+}
+
+@keyframes sliderFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .header-right {
-  width: 50%;
+  width: 57%;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -123,7 +200,6 @@ button {
   padding: 0 16px;
   border: 2px solid #efefef;
   border-radius: 100px;
-  width: 300px;
   height: 50px;
 }
 .header-right-search img {
@@ -133,6 +209,13 @@ button {
   flex: 1;
   border: none;
   outline: none;
+  background-color: transparent;
+}
+.header-right-search-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
 }
 .header-right button {
   padding: 15px 0;
@@ -144,7 +227,7 @@ button {
 .header-right .btn-upload {
   background-color: #3d00b7;
   color: #fff;
-  width: 131px;
+  padding: 15px 37px;
 }
 .header-right .btn-upload:hover {
   background-color: #310092;
@@ -153,7 +236,7 @@ button {
   background-color: transparent;
   color: #3d00b7;
   border: 1px solid #3d00b7;
-  width: 156px;
+  padding: 15px 27px;
 }
 .header-right .btn-wallet:hover {
   background-color: #3d00b7;
@@ -164,17 +247,81 @@ button {
   .header-container {
     padding: 0 20px;
   }
-  .header-right-search {
-    flex: auto;
-  }
 }
 @media screen and (max-width: 1023px) {
   .header-container {
     padding: 0 20px;
   }
+  .header-left {
+    width: auto;
+  }
+  .header-left-navigator {
+    display: none;
+  }
+  .header-left-navigator-mobile {
+    display: block;
+  }
+  .header-right {
+    justify-content: flex-end;
+  }
+  .header-right-search {
+    width: fit-content;
+    flex: none;
+    transition: all ease-in-out 2s;
+  }
+  .header-right-search input {
+    display: none;
+  }
+  .header-right-search .search-input-active {
+    display: block;
+  }
+  .header-right .header-right-search-active {
+    width: 100%;
+  }
+  .header-right .btn-upload {
+    padding: 15px 20px;
+  }
+  .header-right .btn-upload-hide {
+    display: none;
+  }
+  .header-right .btn-wallet-hide {
+    display: none;
+  }
+  .header-right .btn-wallet {
+    padding: 15px 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header-container {
+    padding: 0 16px;
+    gap: 0;
+  }
+  .header-left-logo {
+    padding: 0;
+  }
+  .header-left-logo::after {
+    content: none;
+  }
+  .header-menu {
+    width: 70%;
+  }
+  .header-right-search {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-right .btn-upload {
+    display: none;
+  }
+  .header-right .btn-wallet {
+    display: none;
+  }
 }
 main {
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
 #hero {
@@ -995,6 +1142,22 @@ main {
   .hero-container .hero-right {
     width: 100% !important;
   }
+  .hero-container .hero-left {
+    text-align: center;
+  }
+  .hero-container .hero-left-title, .hero-container .hero-left-desc {
+    max-width: 80% !important;
+    margin: 0 auto;
+  }
+  .hero-container .hero-left-alys {
+    justify-content: center;
+  }
+  .hero-container .hero-right .swipper {
+    height: 500px !important;
+  }
+  .hero-container .hero-right .auction-logo {
+    display: none;
+  }
   #over .over-container {
     flex-direction: column;
   }
@@ -1040,11 +1203,68 @@ main {
   #discover .discover-content .item {
     width: calc(50% - 22px);
   }
+  #amaze-nft .amaze-nft-container {
+    flex-direction: column;
+    gap: 32px;
+  }
+  #amaze-nft .amaze-title {
+    text-align: center;
+  }
+  #amaze-nft .amaze-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   .feature-nft-container {
     padding: 64px 20px !important;
   }
   #discover {
     padding: 64px 20px;
+  }
+}
+@media screen and (max-width: 739px) {
+  #hero .hero-right .swipper {
+    height: 360px !important;
+  }
+  #amaze-nft .amaze-content {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  #amaze-nft .amaze-transaction {
+    flex-direction: column;
+    text-align: center;
+  }
+  #amaze-nft .amaze-transaction-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #over .over-right {
+    flex-direction: column;
+    gap: 32px;
+  }
+  #over .over-right-sell {
+    width: 100%;
+  }
+  #over .over-right-sell::before {
+    content: none;
+    width: 100%;
+  }
+  #over .over-right-collect {
+    width: 100%;
+    padding: 0;
+  }
+  #feature-nft .feature-nft-content .nft-item {
+    width: 100%;
+  }
+  #discover .discover-filter-left {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #discover .discover-content .item {
+    width: 100%;
   }
 }
 #footer {
@@ -1086,6 +1306,11 @@ main {
 .footer-container .nfters-social .item:hover {
   cursor: pointer;
   transform: translateY(-5px);
+}
+.footer-container .footer-link {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
 }
 .footer-container .marketplace-title {
   font-family: "DM Sans", sans-serif;
@@ -1162,6 +1387,20 @@ main {
   background: #310092;
 }
 
+.copy-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.copy-container span {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 160%;
+  color: #363639;
+}
+
 @media screen and (min-width: 1024px) and (max-width: 1200px) {
   .footer-container {
     padding: 0 20px;
@@ -1171,6 +1410,43 @@ main {
   }
   .footer-container .marketplace-content .desc {
     max-width: 300px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .nfters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 739px) {
+  .footer-container {
+    padding: 0 20px;
+  }
+  .marketplace-title {
+    margin-bottom: 12px !important;
+    text-align: center;
+  }
+  .desc {
+    text-align: center;
+  }
+  .footer-link {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .footer-link-a {
+    display: flex;
+    justify-content: space-between;
+  }
+  .copy-container {
+    margin-top: 32px;
   }
 }
 swiper-container {
