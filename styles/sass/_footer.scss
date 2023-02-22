@@ -215,4 +215,15 @@
     .copy-container {
         margin-top: 32px;
     }
+
+    .contact-email {
+        flex-direction: column;
+        gap: 12px;
+        height: auto !important;
+        padding: 6px 0 !important;
+        border-radius: 8px !important;
+        input {
+            padding: 12px 0;
+        }
+    }
 }
