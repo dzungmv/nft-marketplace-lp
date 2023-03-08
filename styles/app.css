@@ -59,6 +59,7 @@ button {
   right: 0;
   left: 0;
   z-index: 1000;
+  background-color: #fff;
 }
 
 .header-container {
@@ -1331,6 +1332,10 @@ main {
   flex: 1;
   display: flex;
   justify-content: space-around;
+}
+.footer-container .footer-link-a {
+  display: flex;
+  gap: 32px;
 }
 .footer-container .marketplace-title {
   font-family: "DM Sans", sans-serif;
